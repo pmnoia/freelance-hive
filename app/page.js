@@ -1,103 +1,122 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+            Welcome to <span className="text-blue-600">FreelanceHive</span>
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            The student freelancer marketplace where talent meets opportunity. 
+            Connect with skilled students for your projects or find exciting work as a freelancer.
+          </p>
+          
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/register" 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-200"
+            >
+              Get Started - Join Now
+            </a>
+            <a 
+              href="/login" 
+              className="bg-white hover:bg-gray-50 text-blue-600 font-semibold py-3 px-8 rounded-lg border-2 border-blue-600 transition duration-200"
+            >
+              Sign In
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Features Section */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {/* For Freelancers */}
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">For Freelancers</h2>
+            <ul className="space-y-3 text-gray-600">
+              <li className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                Find projects that match your skills
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                Work with local businesses and students
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                Build your portfolio and experience
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                Set your own rates and schedule
+              </li>
+            </ul>
+            <div className="mt-6">
+              <a 
+                href="/register" 
+                className="inline-block bg-blue-100 hover:bg-blue-200 text-blue-600 font-medium py-2 px-4 rounded transition duration-200"
+              >
+                Join as Freelancer →
+              </a>
+            </div>
+          </div>
+
+          {/* For Clients */}
+          <div className="bg-white rounded-xl p-8 shadow-lg">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">For Clients</h2>
+            <ul className="space-y-3 text-gray-600">
+              <li className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                Access skilled student talent
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                Affordable rates for quality work
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                Post projects easily and quickly
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-500 mr-2">✓</span>
+                Support student entrepreneurs
+              </li>
+            </ul>
+            <div className="mt-6">
+              <a 
+                href="/register" 
+                className="inline-block bg-blue-100 hover:bg-blue-200 text-blue-600 font-medium py-2 px-4 rounded transition duration-200"
+              >
+                Hire Freelancers →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Popular Categories */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">Popular Categories</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {['Web Development', 'Graphic Design', 'Content Writing', 'Digital Marketing'].map((category) => (
+              <span 
+                key={category}
+                className="bg-white text-gray-700 px-6 py-3 rounded-full shadow-md font-medium"
+              >
+                {category}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Footer */}
+        <div className="text-center mt-16 pt-8 border-t border-gray-200">
+          <p className="text-gray-500">
+            Built with Next.js, MongoDB, and passion for connecting talent with opportunity.
+          </p>
+        </div>
+      </div>
+    </main>
   );
 }
