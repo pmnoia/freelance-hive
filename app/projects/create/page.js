@@ -108,7 +108,7 @@ export default function CreateProjectPage() {
     setLoading(true);
 
     try {
-      const response = await fetch('/api/projects', {
+      const response = await fetch('../api/projects', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

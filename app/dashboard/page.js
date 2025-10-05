@@ -29,7 +29,7 @@ export default function Dashboard() {
     // If client, get their projects; if freelancer, get open projects
     const params = currentUser.role === 'client' 
       ? `?clientId=${currentUser._id}` 
-      : '?status=open&limit=5';      const response = await fetch(`/api/projects${params}`);
+      : '?status=open&limit=5';      const response = await fetch(`./api/projects${params}`);
       const data = await response.json();
       
       if (data.success) {

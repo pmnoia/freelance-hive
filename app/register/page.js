@@ -24,7 +24,7 @@ export default function RegisterPage() {
     setMessage('');
 
     try {
-      const response = await fetch('/api/register', {
+      const response = await fetch('./api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -41,10 +41,15 @@ export default function RegisterPage() {
           router.push('/login');
         }, 2000);
       } else {
-        setError(data.error || 'Registration failed');
+        console.error('Registration API Error:', data);
+        setError(data.error || `Registration failed (${response.status})`);
+        if (data.details) {
+          console.error('Details:', data.details);
+        }
       }
     } catch (err) {
-      setError('Something went wrong. Please try again.');
+      console.error('Registration Network Error:', err);
+      setError(`Network error: ${err.message}`);
     } finally {
       setLoading(false);
     }

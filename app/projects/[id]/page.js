@@ -42,7 +42,7 @@ export default function ProjectDetailsPage({ params }) {
 
   const fetchProject = async () => {
     try {
-      const response = await fetch(`/api/projects/${projectId}`);
+      const response = await fetch(`../api/projects/${projectId}`);
       const data = await response.json();
       
       if (data.success) {
@@ -112,7 +112,7 @@ export default function ProjectDetailsPage({ params }) {
     setSubmitting(true);
     
     try {
-      const response = await fetch('/api/proposals', {
+      const response = await fetch('../api/proposals', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

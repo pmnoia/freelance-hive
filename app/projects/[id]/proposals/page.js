@@ -40,7 +40,7 @@ export default function ProposalsPage({ params }) {
   const fetchProjectAndProposals = async (currentUser) => {
     try {
       // Fetch project details
-      const projectResponse = await fetch(`/api/projects/${projectId}`);
+      const projectResponse = await fetch(`../../api/projects/${projectId}`);
       const projectData = await projectResponse.json();
       
       if (!projectData.success) {
@@ -59,7 +59,7 @@ export default function ProposalsPage({ params }) {
       setProject(projectInfo);
       
       // Fetch proposals for this project
-      const proposalsResponse = await fetch(`/api/proposals?projectId=${projectId}`);
+      const proposalsResponse = await fetch(`../../api/proposals?projectId=${projectId}`);
       const proposalsData = await proposalsResponse.json();
       
       if (proposalsData.success) {
@@ -78,7 +78,7 @@ export default function ProposalsPage({ params }) {
     }
     
     try {
-      const response = await fetch(`/api/proposals/${proposalId}`, {
+      const response = await fetch(`../../api/proposals/${proposalId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

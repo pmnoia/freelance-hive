@@ -23,7 +23,7 @@ export default function ProjectsPage() {
       if (filters.status) params.append('status', filters.status);
       if (filters.category) params.append('category', filters.category);
       
-      const response = await fetch(`/api/projects?${params}`);
+      const response = await fetch(`./api/projects?${params}`);
       const data = await response.json();
       
       if (data.success) {

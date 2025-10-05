@@ -29,7 +29,7 @@ export default function MyProposalsPage() {
 
   const fetchProposals = async (currentUser) => {
     try {
-      const response = await fetch(`/api/proposals?freelancerId=${currentUser._id}`);
+      const response = await fetch(`./api/proposals?freelancerId=${currentUser._id}`);
       const data = await response.json();
       
       if (data.success) {
