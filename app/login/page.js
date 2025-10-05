@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function LoginPage() {
   const [formData, setFormData] = useState({
@@ -142,9 +143,9 @@ export default function LoginPage() {
               <div className="relative flex justify-center text-sm">
                 <span className="px-2 bg-white text-gray-500">
                   Don&apos;t have an account?{' '}
-                  <a href="/register" className="font-medium text-blue-600 hover:text-blue-500">
+                  <Link href="/register" className="font-medium text-blue-600 hover:text-blue-500">
                     Create one here
-                  </a>
+                  </Link>
                 </span>
               </div>
             </div>

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -15,18 +17,18 @@ export default function Home() {
           
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <Link 
               href="/register" 
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition duration-200"
             >
               Get Started - Join Now
-            </a>
-            <a 
+            </Link>
+            <Link 
               href="/login" 
               className="bg-white hover:bg-gray-50 text-blue-600 font-semibold py-3 px-8 rounded-lg border-2 border-blue-600 transition duration-200"
             >
               Sign In
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -54,12 +56,12 @@ export default function Home() {
               </li>
             </ul>
             <div className="mt-6">
-              <a 
+              <Link 
                 href="/register" 
                 className="inline-block bg-blue-100 hover:bg-blue-200 text-blue-600 font-medium py-2 px-4 rounded transition duration-200"
               >
                 Join as Freelancer →
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -85,12 +87,12 @@ export default function Home() {
               </li>
             </ul>
             <div className="mt-6">
-              <a 
+              <Link 
                 href="/register" 
                 className="inline-block bg-blue-100 hover:bg-blue-200 text-blue-600 font-medium py-2 px-4 rounded transition duration-200"
               >
                 Hire Freelancers →
-              </a>
+              </Link>
             </div>
           </div>
         </div>
