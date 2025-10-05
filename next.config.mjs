@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {  
-    basePath: '/freelance-hive', // Comment this out for local development
-    experimental: {
-        instrumentationHook: true,
-    },};
+    basePath: '', // Comment this out for local development
+    };
 
 export default nextConfig;
